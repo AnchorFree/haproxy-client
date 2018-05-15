@@ -9,4 +9,4 @@ done
 
 cp -rf /opt/haproxy/error-pages /etc/haproxy/
 
-exec /usr/local/sbin/haproxy-systemd-wrapper -p /run/haproxy.pid -f /etc/haproxy/haproxy.cfg
+exec haproxy -f /etc/haproxy/haproxy.cfg
