@@ -1,4 +1,4 @@
-FROM haproxy:1.8.9-alpine
+FROM haproxy:1.8.12-alpine
 
 RUN apk --no-cache upgrade && apk add --no-cache ca-certificates openssl && mkdir /etc/haproxy && mkdir -p /opt/haproxy
 COPY entrypoint.sh /bin/
