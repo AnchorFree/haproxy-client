@@ -9,4 +9,8 @@ done
 
 cp -rf /opt/haproxy/error-pages /etc/haproxy/
 
-exec haproxy -f /etc/haproxy/haproxy.cfg -W -db
+if [ -z "$CONFIG" ]; then
+    CONFIG="/etc/haproxy/haproxy.cfg"
+fi
+
+exec haproxy -f $CONFIG -W -db
